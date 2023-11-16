@@ -1,11 +1,11 @@
 export const config = {
   firebaseConfig: {
-    apiKey: 'AIzaSyBf11UfGsslDMr3Z9DhuutUXHsUQwEa7GM',
-    authDomain: 'messaging-app-mern-81944.firebaseapp.com',
-    projectId: 'messaging-app-mern-81944',
-    storageBucket: 'messaging-app-mern-81944.appspot.com',
-    messagingSenderId: '226290122815',
-    appId: '1:226290122815:web:85e5ca93d68c5f3f22388a',
-    measurementId: 'G-XPGRGLYQ30',
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID,
   },
 }

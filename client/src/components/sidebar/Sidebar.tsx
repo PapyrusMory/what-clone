@@ -1,12 +1,16 @@
 import { DonutLarge, Chat, MoreVert, SearchOutlined } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
 import SidebarChat from './SidebarChat'
+import { Store } from '../../redux/Store'
+import { useContext } from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({ messages }: any) => {
+  const { state } = useContext(Store)
+  const { userInfo } = state
   return (
     <div className='sidebar'>
       <div className='sidebar-header'>
-        <Avatar />
+        <Avatar src={userInfo?.photoURL} />
         <div className='sidebar-headerRight'>
           <IconButton>
             <DonutLarge />
@@ -26,9 +30,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className='sidebar-chats'>
-        <SidebarChat />
-        <SidebarChat />
-        <SidebarChat />
+        <SidebarChat messages={messages} />
       </div>
     </div>
   )
